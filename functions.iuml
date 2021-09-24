@@ -4,3 +4,8 @@
     footer Generated on $now
 !endprocedure
 
+
+!procedure $jira_link($issue_key)
+  [$issue_key] links to [[https://wetrack.advantest.com/browse/$issue_key {$issue_key}]]
+!endprocedure
+
