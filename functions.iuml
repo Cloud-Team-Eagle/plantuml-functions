@@ -1,0 +1,6 @@
+
+!procedure $print_footer()
+    !$now = %date("yyyy.MM.dd")
+    footer Generated on $now
+!endprocedure
+
