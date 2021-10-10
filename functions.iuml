@@ -1,14 +1,20 @@
 
 !procedure $print_footer()
-    !$now = %date("yyyy.MM.dd")
-    footer Generated on $now
+  !$now = %date("yyyy.MM.dd")
+  footer Generated on $now
 !endprocedure
 
 
-!procedure $jira_link($issue_key)
+!unquoted procedure $jira_link($issue_key)
   [$issue_key] links to [[https://wetrack.advantest.com/browse/$issue_key {$issue_key}]]
 !endprocedure
 
+
+
+!unquoted procedure $day_progress($start, $end)
+  !local $now = %date("yyyy.MM.dd")
+
+!endprocedure
 
 
 !$start = "2021.06.21"
