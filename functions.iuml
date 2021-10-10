@@ -9,3 +9,16 @@
   [$issue_key] links to [[https://wetrack.advantest.com/browse/$issue_key {$issue_key}]]
 !endprocedure
 
+
+
+!$start = "2021.06.21"
+!$now = %date("yyyy.MM.dd")
+!$end = "2021.09.24"
+
+!if ($now > $end)
+!$now = $end
+!endif
+
+$start to $now are colored in Gainsboro
+$now is colored in Red
+
