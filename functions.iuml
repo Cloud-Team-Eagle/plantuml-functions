@@ -12,19 +12,23 @@
 
 
 !unquoted procedure $day_progress($start, $end)
+  ' validation goes here
+  ' !assert %strpos("abcdef", "cd")==34 : "Both dates should be formatted with YYYY/MM/DD"
+
+
+  ' !$start = "2021.06.21".  # start and 
+  ' !$end = "2021.09.24"
+
   !local $now = %date("yyyy.MM.dd")
 
+  !if ($now > $end)
+    !$now = $end
+  !endif
+
+  $start to $now are colored in Gainsboro
+  $now is colored in Red
 !endprocedure
 
 
-!$start = "2021.06.21"
-!$now = %date("yyyy.MM.dd")
-!$end = "2021.09.24"
 
-!if ($now > $end)
-!$now = $end
-!endif
-
-$start to $now are colored in Gainsboro
-$now is colored in Red
 
