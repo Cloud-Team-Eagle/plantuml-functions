@@ -1,11 +1,34 @@
 
 !procedure $print_footer()
-    !$now = %date("yyyy.MM.dd")
-    footer Generated on $now
+  !$now = %date("yyyy.MM.dd")
+  footer Generated on $now
 !endprocedure
 
 
-!procedure $jira_link($issue_key)
+!unquoted procedure $jira_link($issue_key)
   [$issue_key] links to [[https://wetrack.advantest.com/browse/$issue_key {$issue_key}]]
 !endprocedure
+
+
+
+!unquoted procedure $day_progress($start, $end)
+  ' validation goes here
+  ' !assert %strpos("abcdef", "cd")==34 : "Both dates should be formatted with YYYY/MM/DD"
+
+
+  ' !$start = "2021.06.21".  # start and 
+  ' !$end = "2021.09.24"
+
+  !local $now = %date("yyyy.MM.dd")
+
+  !if ($now > $end)
+    !$now = $end
+  !endif
+
+  $start to $now are colored in Gainsboro
+  $now is colored in Red
+!endprocedure
+
+
+
 
