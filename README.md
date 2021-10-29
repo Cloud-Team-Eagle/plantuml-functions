@@ -20,3 +20,12 @@ Bob --> Alice: Authentication Response
 Alice -> Bob:Another authentication Response
 Bob --> Alice: Another authentication Response
 ```
+
+
+## Links
+
+
+* https://stackoverflow.com/questions/3309012/what-is-the-formula-for-calculating-a-timestamp
+
+
+
